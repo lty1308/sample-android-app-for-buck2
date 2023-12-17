@@ -1,0 +1,6 @@
+android_library(
+  name = 'activity',
+  srcs = glob(['*.java']),
+  deps = ['//res/com/buck/example:res'],
+  visibility = [ 'PUBLIC' ],
+)
