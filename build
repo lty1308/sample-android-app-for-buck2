@@ -1,0 +1,13 @@
+#!/bin/sh
+
+SRC=~/fbsource/fbcode/buck2/prelude
+DEST=.
+
+echo ">>> Syncing from $SRC to $DEST"
+rsync \
+--exclude=prelude/.buckconfig \
+--exclude=prelude/.cpplsp* \
+$SRC $DEST -a;
+
+echo ">>> buck2 build app"
+buck2 build app
