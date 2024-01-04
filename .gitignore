@@ -1,3 +1,4 @@
 buck-out
 .buckd
-prelude
+prelude/**
+!prelude/.buckconfig

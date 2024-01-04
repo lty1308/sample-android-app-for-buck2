@@ -1,0 +1,44 @@
+[repositories]
+prelude = .
+shim = shim
+
+[repository_aliases]
+config = prelude
+ovr_config = prelude
+fbcode = shim
+fbcode_macros = shim
+fbsource = shim
+buck = shim
+
+[parser]
+target_platform_detector_spec = target:root//...->prelude//platforms:default target:shim//...->prelude//platforms:default
+
+[buildfile]
+name = TARGETS
+
+# [repositories]
+# prelude = .
+# 
+# # We want to disable the following values when we don't have open source,
+# # but our custom config format (yuk) doesn't accept inline comments.
+# # Therefore, we hide the name of the group when not open source.
+# 
+# # @oss-enable: [not_repositories]
+# fbcode = ../..
+# fbsource = ../../..
+# ovr_config = ../../../arvr/tools/build_defs/config
+# bazel_skylib = ../../../third-party/bazel-skylib
+# fbcode_macros = ../../../tools/build_defs/fbcode_macros
+# fbobjc_dylibs = ../../../tools/build_defs/fbobjc_dylibs
+# buck = ../../../xplat/build_infra/buck_client
+# buck_client = buck_client
+# buck_bazel_skylib = ../../../xplat/build_infra/buck_client/third-party/skylark/bazel-skylib
+# toolchains = ../toolchains
+# 
+# [repository_aliases]
+# # @oss-enable: [not_repository_aliases]
+# config = ovr_config
+# 
+# [buildfile]
+# # @oss-enable: [not_buildfile]
+# name = TARGETS
