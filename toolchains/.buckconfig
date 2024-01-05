@@ -1,0 +1,10 @@
+[repositories]
+    toolchains = .
+
+[java]
+    source_level = 8
+    target_level = 8
+    src_roots = src, test
+
+[kotlin]
+    kotlincd_dep_files = per_class

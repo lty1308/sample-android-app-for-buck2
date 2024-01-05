@@ -1,0 +1,64 @@
+# load("//ndk:defs.bzl", "cxx_toolchains_from_ndk")
+load("@prelude//toolchains:python.bzl", "system_python_bootstrap_toolchain", "system_python_toolchain")
+# load("@prelude//toolchains:java.bzl", "add_system_java_toolchains")
+load("@prelude//toolchains:dex.bzl", "system_dex_toolchains")
+# load(":defs.bzl", "android_hack_alias", "toolchain", "toolchain_alias")
+
+# cxx_toolchains_from_ndk(
+#     name = "cxx",
+#     visibility = ["PUBLIC"],
+# )
+
+system_python_toolchain(
+    name = "python",
+    visibility = ["PUBLIC"],
+)
+
+system_python_bootstrap_toolchain(
+    name = "python_bootstrap",
+    visibility = ["PUBLIC"],
+)
+
+system_dex_toolchains(
+    name = "dex",
+    visibility = ["PUBLIC"],
+)
+
+# add_system_java_toolchains();
+
+# toolchain(
+#     name = "android",
+#     dep = "//android:android",
+#     visibility = ["PUBLIC"],
+# )
+
+# # TODO(cjhopman): This is working around an issue with split transitions not supporting toolchain deps :/ remove once we have that.
+# android_hack_alias(
+#     name = "android-hack",
+#     actual = ":cxx",
+#     visibility = ["PUBLIC"],
+# )
+
+# toolchain(
+#     name = "kotlin",
+#     dep = "//kotlin:kotlin",
+#     visibility = ["PUBLIC"],
+# )
+
+# toolchain(
+#     name = "kotlin_bootstrap",
+#     dep = "//kotlin:kotlin_bootstrap",
+#     visibility = ["PUBLIC"],
+# )
+
+# toolchain(
+#     name = "genrule",
+#     dep = "//genrule:genrule",
+#     visibility = ["PUBLIC"],
+# )
+
+# toolchain(
+#     name = "zip_file",
+#     dep = "//zip_file:zip_file",
+#     visibility = ["PUBLIC"],
+# )

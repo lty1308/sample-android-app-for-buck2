@@ -2,6 +2,11 @@
     root = .
     prelude = prelude
     toolchains = toolchains
+    buck = prelude/buck_client
+
+[android]
+    compile_sdk_version = android-34
+    sdk_path = /Users/tianyuli/Library/Android/sdk
 
 [alias]
     app = //apps/example:app
