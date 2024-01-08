@@ -14,3 +14,10 @@ java_library(
   deps = [],
   visibility = [ 'PUBLIC' ],
 )
+
+kotlin_library(
+  name = 'util-kotlin',
+  srcs = ['util/log.kt'],
+  deps = [],
+  visibility = [ 'PUBLIC' ],
+)
