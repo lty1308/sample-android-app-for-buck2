@@ -10,6 +10,9 @@
     build_tools_version = 34.0.0
     sdk_path = /Users/tianyuli/Library/Android/sdk
 
+[kotlin]
+    kotlin_home = /Applications/Android Studio.app/Contents/plugins/Kotlin/kotlinc
+
 [alias]
     app = //apps/example:app
 

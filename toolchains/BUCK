@@ -3,7 +3,7 @@ load("@prelude//toolchains:python.bzl", "system_python_bootstrap_toolchain", "sy
 load("@prelude//toolchains:java.bzl", "system_java_toolchains")
 load("@prelude//toolchains:dex.bzl", "system_dex_toolchains")
 load("@prelude//toolchains:android.bzl", "system_android_toolchains")
-# load("@prelude//toolchains:kotlin.bzl", "system_kotlin_toolchains")
+load("@prelude//toolchains:kotlin.bzl", "system_kotlin_toolchains")
 
 # cxx_toolchains_from_ndk(
 #     name = "cxx",
@@ -35,15 +35,10 @@ system_android_toolchains(
     visibility = ["PUBLIC"],
 )
 
-# system_kotlin_toolchains(
-#     name = "kotlin",
-#     visibility = ["PUBLIC"],
-# )
-
-# system_kotlin_toolchains(
-#     name = "kotlin_bootstrap",
-#     visibility = ["PUBLIC"],
-# )
+system_kotlin_toolchains(
+    name = "kotlin",
+    visibility = ["PUBLIC"],
+)
 
 # toolchain(
 #     name = "genrule",
