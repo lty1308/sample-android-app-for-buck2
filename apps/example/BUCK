@@ -16,6 +16,7 @@ android_binary(
     '//res/com/buck/example:res',
   ],
   default_target_platform = ":default_platform",
+  android_sdk_proguard_config = "none",
 )
 
 keystore(
