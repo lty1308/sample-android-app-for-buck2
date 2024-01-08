@@ -3,6 +3,7 @@
     prelude = prelude
     toolchains = toolchains
     buck = prelude/buck_client
+    buck_bazel_skylib = prelude/buck_client/third-party/skylark/bazel-skylib
 
 [android]
     compile_sdk_version = android-34

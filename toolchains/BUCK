@@ -1,6 +1,6 @@
 # load("//ndk:defs.bzl", "cxx_toolchains_from_ndk")
 load("@prelude//toolchains:python.bzl", "system_python_bootstrap_toolchain", "system_python_toolchain")
-# load("@prelude//toolchains:java.bzl", "add_system_java_toolchains")
+load("@prelude//toolchains:java.bzl", "system_java_toolchains")
 load("@prelude//toolchains:dex.bzl", "system_dex_toolchains")
 # load(":defs.bzl", "android_hack_alias", "toolchain", "toolchain_alias")
 
@@ -24,7 +24,10 @@ system_dex_toolchains(
     visibility = ["PUBLIC"],
 )
 
-# add_system_java_toolchains();
+system_java_toolchains(
+    java_home = "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home",
+    visibility = ["PUBLIC"],
+)
 
 # toolchain(
 #     name = "android",
