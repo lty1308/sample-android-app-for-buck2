@@ -17,6 +17,7 @@ android_binary(
   ],
   default_target_platform = ":default_platform",
   android_sdk_proguard_config = "none",
+  aapt_mode = "aapt2",
 )
 
 keystore(
