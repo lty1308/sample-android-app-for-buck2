@@ -20,5 +20,8 @@
     compile_sdk_version = android-34
     sdk_path = /Users/tianyuli/Library/Android/sdk
 
+[ndk]
+    ndk_path = /Users/tianyuli/src/android-ndk/r25c
+
 [parser]                   
     target_platform_detector_spec = target://...->root//apps/example:default_platform
