@@ -27,7 +27,8 @@ system_dex_toolchains(
 )
 
 system_java_toolchains(
-    java_home = "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home",
+    # java_home = "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home",
+    java_home = "/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home",
     visibility = ["PUBLIC"],
 )
 
