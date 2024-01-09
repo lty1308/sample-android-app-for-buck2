@@ -4,7 +4,7 @@ load("@prelude//toolchains:java.bzl", "system_java_toolchains")
 load("@prelude//toolchains:dex.bzl", "system_dex_toolchains")
 load("@prelude//toolchains:android.bzl", "system_android_toolchains")
 load("@prelude//toolchains:kotlin.bzl", "system_kotlin_toolchains")
-load("@prelude//toolchains:defs.bzl", "toolchain")
+load("@prelude//toolchains:genrule.bzl", "system_genrule_toolchain")
 
 system_cxx_toolchains_from_ndk(
     name = "cxx",
@@ -41,8 +41,7 @@ system_kotlin_toolchains(
     visibility = ["PUBLIC"],
 )
 
-toolchain(
+system_genrule_toolchain(
     name = "genrule",
-    dep = "//genrule:genrule",
     visibility = ["PUBLIC"],
 )
